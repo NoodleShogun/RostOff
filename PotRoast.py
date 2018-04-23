@@ -1,10 +1,17 @@
-# https://github.com/Rapptz/discord.py/blob/async/examples/reply.py
+# https://github.com/NoodleShogun/RostOff/tree/master
+
+# imports
 import discord
 
-TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
 
+# variables and other stuff
+TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
 client = discord.Client()
 
+
+
+
+# Command Functions
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -15,6 +22,7 @@ async def on_message(message):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
+# Core Functions
 @client.event
 async def on_ready():
     print('Logged in as')
