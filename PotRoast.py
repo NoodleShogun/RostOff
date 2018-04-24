@@ -1,8 +1,9 @@
 # https://github.com/NoodleShogun/RostOff/tree/master
 
 # imports
-import discord
 
+import discord
+import random
 
 # variables and other stuff
 TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
