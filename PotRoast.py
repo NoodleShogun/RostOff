@@ -21,11 +21,16 @@ client = Bot(command_prefix=BOT_PREFIX)
 
 
 @client.command(name="roast")
-async def roast(user: discord.User):
-    roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ", "Ur Mom Gay",
-              "One might say that you lack an ability to process reasonable explanations for sticky situations"
+async def roast(user: discord.User=None):
+    roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ.", "Ur Mom Gay",
+              "One might say that you lack an ability to process reasonable explanations for sticky situations.",
+              "Yo mama so fat she occupies Wall St by herself!"
               ]
-    await client.say(""+ user.mention + " " + random.choice(roasts))
+
+    if not user:
+        await client.say(""+random.choice(roasts))
+    else:
+        await client.say(""+ user.mention + " " + random.choice(roasts))
 
 
 # Core Functions
