@@ -34,10 +34,11 @@ async def roast(user: discord.User=None):
     if user == "Pot Roast":
         await client.say("Go Fuck yourself asshole!")
 
-    if not user:
-        await client.say(""+random.choice(roasts2))
     else:
-        await client.say(""+ user.mention + " " + random.choice(roasts))
+        if not user:
+            await client.say(""+random.choice(roasts2))
+        else:
+            await client.say(""+ user.mention + " " + random.choice(roasts))
 
 
 # Core Functions
