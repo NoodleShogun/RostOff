@@ -24,7 +24,10 @@ client = Bot(command_prefix=BOT_PREFIX)
 async def roast(user: discord.User=None):
     roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ.", "Ur Mom Gay",
               "One might say that you lack an ability to process reasonable explanations for sticky situations.",
-              "Yo mama so fat she occupies Wall St by herself!"
+              "Yo mama so fat she occupies Wall St by herself!",
+              "I took a picture of your mom, got it developed. When I hung it up, the nail bent.",
+              "You’re so poor, your house is so small, when you order a pizza you have to eat it outside.",
+              ""
               ]
 
     if not user:
