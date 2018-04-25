@@ -2,6 +2,8 @@
 
 # imports
 from discord.ext.commands import Bot
+import discord
+
 from discord import Game
 import asyncio
 import aiohttp
@@ -18,12 +20,12 @@ client = Bot(command_prefix=BOT_PREFIX)
 # Command Functions
 
 
-@client.command(name = "roast")
-async def roast():
+@client.command(name="roast")
+async def roast(user: discord.User):
     roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ", "Ur Mom Gay",
               "One might say that you lack an ability to process reasonable explanations for sticky situations"
               ]
-    await client.say("" + random.choice(roasts))
+    await client.say(""+ user.mention + " " + random.choice(roasts))
 
 
 # Core Functions
