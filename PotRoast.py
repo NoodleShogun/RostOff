@@ -34,7 +34,8 @@ async def roast(user: discord.User=None):
               "that you’re stupid than open it and remove all doubt.",
               "I don’t know what your problem is, but I’m guessing it’s hard to pronounce."]
 
-    roasts2 = ["To find the amount of Friends you have "]
+    roasts2 = ["To find the amount of Friends you have you must firs take the required amount of parameters "
+               "you put in divided by the amount needed."]
 
     if not user:
         await client.say(""+random.choice(roasts2))
