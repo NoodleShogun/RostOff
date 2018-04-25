@@ -27,18 +27,19 @@ async def roast(user: discord.User=None):
               "Yo mama so fat she occupies Wall St by herself!",
               "I took a picture of your mom, got it developed. When I hung it up, the nail bent.",
               "You’re so poor, your house is so small, when you order a pizza you have to eat it outside.",
-              ""
-              ]
+              "I'm trying my absolute hardest to see things from your perspective, "
+              "but I can't get my head that far up my ass.",
+              "Some day you’ll go far—and I really hope you stay there.",
+              "Sometimes it’s better to keep your mouth shut and give the impression "
+              "that you’re stupid than open it and remove all doubt.",
+              "I don’t know what your problem is, but I’m guessing it’s hard to pronounce."]
+
     roasts2 = ["To find the amount of Friends you have "]
 
-    if user == "Pot Roast":
-        await client.say("Go Fuck yourself asshole!")
-
+    if not user:
+        await client.say(""+random.choice(roasts2))
     else:
-        if not user:
-            await client.say(""+random.choice(roasts2))
-        else:
-            await client.say(""+ user.mention + " " + random.choice(roasts))
+        await client.say(""+ user.mention + " " + random.choice(roasts))
 
 
 # Core Functions
