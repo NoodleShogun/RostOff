@@ -1,26 +1,33 @@
 # https://github.com/NoodleShogun/RostOff/tree/master
 
 # imports
-
-import discord
+from discord.ext.commands import Bot
+from discord import Game
+import asyncio
+import aiohttp
 import random
 
+# bot prefixes
+BOT_PREFIX = ("!")
+
 # variables and other stuff
+
 TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
-
-
-roast1 = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ", "Ur Mom Gay", 
-          "One might say that you lack an ability to process reasonable explanations for sticky situations"
-         ]
-
-
+client = Bot(command_prefix=BOT_PREFIX)
 
 # Command Functions
 
+
+@client.command(name = "roast")
+async def roast():
+    roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ", "Ur Mom Gay",
+              "One might say that you lack an ability to process reasonable explanations for sticky situations"
+              ]
+    await client.say("" + random.choice(roasts))
+
+
 # Core Functions
 
+# core commands
 
-
-
-
-
+client.run(TOKEN)
