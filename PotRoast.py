@@ -38,9 +38,9 @@ async def roast(user: discord.User=None):
                "you put in divided by the amount needed."]
 
     if not user:
-        await client.say(""+random.choice(roasts2))
+        await client.say(""+random.choice(roasts2), tts=True)
     else:
-        await client.say(""+ user.mention + " " + random.choice(roasts))
+        await client.say(""+ user.mention + " " + random.choice(roasts), tts=True)
 
 
 # Core Functions
