@@ -32,7 +32,10 @@ async def roast(user: discord.User=None):
               "Some day you’ll go far—and I really hope you stay there.",
               "Sometimes it’s better to keep your mouth shut and give the impression "
               "that you’re stupid than open it and remove all doubt.",
-              "I don’t know what your problem is, but I’m guessing it’s hard to pronounce."]
+              "I don’t know what your problem is, but I’m guessing it’s hard to pronounce.",
+              "Do your parents even realize they’re living proof that two wrongs don’t make a right?",
+              "Remember that time I said I thought you were cool? I lied.",
+              "Can you die of constipation? I ask because I’m worried about how full of shit you are."]
 
     roasts2 = ["To find the amount of Friends you have you must firs take the required amount of parameters "
                "you put in divided by the amount needed."]
