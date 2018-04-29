@@ -16,8 +16,20 @@ BOT_PREFIX = ("!")
 
 TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
 client = Bot(command_prefix=BOT_PREFIX)
-
+canTTS = True
 # Command Functions
+
+
+@client.command(name="tts")
+async def entts(enable=False):
+
+        global canTTS
+        if enable:
+            print("TTS set to TRUE")
+            canTTS = True
+        else:
+            print("TTS set to FALSE")
+            canTTS = False
 
 
 @client.command(name="roast")
@@ -41,9 +53,11 @@ async def roast(user: discord.User=None):
                "you put in divided by the amount needed."]
 
     if not user:
-        await client.say(""+random.choice(roasts2), tts=True)
+        await client.say(""+random.choice(roasts2), tts=canTTS)
     else:
-        await client.say(""+ user.mention + " " + random.choice(roasts), tts=True)
+        await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
+
+
 
 
 # Core Functions
