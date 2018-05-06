@@ -9,13 +9,9 @@ import asyncio
 import aiohttp
 import random
 
-#load data.json so data can be pulled from it
-
-
+# load data.json so data can be pulled from it
 with open('data.json') as data:
     config = json.load(data)
-
-
 
 # bot prefixes
 BOT_PREFIX = config["prefix"]
@@ -26,10 +22,6 @@ TOKEN = config["tokens"]
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 # Command Functions
-
-
-
-
 
 
 @client.command(name="tts")
@@ -68,9 +60,6 @@ async def roast(user: discord.User=None):
         await client.say(""+random.choice(roasts2), tts=canTTS)
     else:
         await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
-
-
-
 
 # Core Functions
 
