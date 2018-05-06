@@ -51,9 +51,9 @@ async def roast(user: discord.User=None):
               "I don’t know what your problem is, but I’m guessing it’s hard to pronounce.",
               "Do your parents even realize they’re living proof that two wrongs don’t make a right?",
               "Remember that time I said I thought you were cool? I lied.",
-              "Can you die of constipation? I ask because I’m worried about how full of shit you are."]
+              "Can you die of constipation? I ask because I’m worried about how full of $hit you are."]
 
-    roasts2 = ["To find the amount of Friends you have you must firs take the required amount of parameters "
+    roasts2 = ["To find the amount of Friends you have you must first take the required amount of parameters "
                "you put in divided by the amount needed."]
 
     if not user:
