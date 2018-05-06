@@ -3,21 +3,33 @@
 # imports
 from discord.ext.commands import Bot
 import discord
-
+import json
 from discord import Game
 import asyncio
 import aiohttp
 import random
 
+#load data.json so data can be pulled from it
+
+
+with open('data.json') as data:
+    config = json.load(data)
+
+
+
 # bot prefixes
-BOT_PREFIX = ("!")
+BOT_PREFIX = config["prefix"]
 
 # variables and other stuff
 
-TOKEN = 'NDM4MDgyMTAyOTUzNzcxMDEw.Db_buQ._9gFilYm4oRyurUMPACaJ4DrLxs'
+TOKEN = config["tokens"]
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 # Command Functions
+
+
+
+
 
 
 @client.command(name="tts")
