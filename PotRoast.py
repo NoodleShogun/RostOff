@@ -22,6 +22,14 @@ client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 # Command Functions
 
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+
+
 
 @client.command(name="tts")
 async def entts(enable=False):
