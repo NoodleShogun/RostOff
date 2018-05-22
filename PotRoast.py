@@ -10,16 +10,23 @@ import asyncio
 import aiohttp
 import random
 
+is_prod = os.environ.get('IS_HEROKU', None)
 # load data.json so data can be pulled from it
 with open('data.json') as data:
     config = json.load(data)
 
 # bot prefixes
-BOT_PREFIX = os.environ.get('prefix')
+
 
 # variables and other stuff
 
-TOKEN = os.environ.get('token')
+if is_prod:
+    BOT_PREFIX = os.environ.get('prefix')
+    TOKEN = os.environ.get('token')
+else:
+    TOKEN = config["tokens"]
+    BOT_PREFIX = config["prefix"]
+
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 # Command Functions
