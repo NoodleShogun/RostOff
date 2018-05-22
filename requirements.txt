@@ -1,2 +1,1 @@
 git+git://github.com/Rapptz/discord.py.git@async#egg=discord
-python-3.6.4
