@@ -1,1 +1,1 @@
-worker: python3 PotRoast.py
+worker: python PotRoast.py
