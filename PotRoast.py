@@ -1,16 +1,12 @@
 # https://github.com/NoodleShogun/RostOff/tree/master
 
 # imports
+import os
 from discord.ext.commands import Bot
 import discord
-import json
-import os
-from discord import Game
-import asyncio
-import aiohttp
 import random
 
-is_prod = os.environ.get('IS_HEROKU', None)
+
 # load data.json so data can be pulled from it
 
 # bot prefixes
@@ -19,8 +15,8 @@ is_prod = os.environ.get('IS_HEROKU', None)
 # variables and other stuff
 
 
-BOT_PREFIX = os.environ.get('prefix')
-TOKEN = os.environ.get('token')
+BOT_PREFIX = os.environ.get['prefix']
+TOKEN = os.environ.get['token']
 
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
