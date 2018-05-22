@@ -18,12 +18,9 @@ is_prod = os.environ.get('IS_HEROKU', None)
 
 # variables and other stuff
 
-if is_prod:
-    BOT_PREFIX = os.environ.get('prefix')
-    TOKEN = os.environ.get('token')
 
-
-
+BOT_PREFIX = os.environ.get('prefix')
+TOKEN = os.environ.get('token')
 
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
