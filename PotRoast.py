@@ -4,6 +4,7 @@
 from discord.ext.commands import Bot
 import discord
 import json
+import os
 from discord import Game
 import asyncio
 import aiohttp
@@ -14,11 +15,11 @@ with open('data.json') as data:
     config = json.load(data)
 
 # bot prefixes
-BOT_PREFIX = config["prefix"]
+BOT_PREFIX = os.environ.get('prefix')
 
 # variables and other stuff
 
-TOKEN = config["tokens"]
+TOKEN = os.environ.get('token')
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 # Command Functions
