@@ -15,8 +15,8 @@ import random
 # variables and other stuff
 
 
-BOT_PREFIX = os.environ.get['prefix']
-TOKEN = os.environ.get['token']
+BOT_PREFIX = os.environ['prefix']
+TOKEN = os.environ['token']
 
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
