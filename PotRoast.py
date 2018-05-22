@@ -12,8 +12,8 @@ import random
 
 is_prod = os.environ.get('IS_HEROKU', None)
 # load data.json so data can be pulled from it
-with open('data.json') as data:
-    config = json.load(data)
+#with open('data.json') as data:
+   # config = json.load(data)
 
 # bot prefixes
 
