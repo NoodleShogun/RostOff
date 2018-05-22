@@ -6,17 +6,16 @@ from discord.ext.commands import Bot
 import discord
 import random
 
-
-# load data.json so data can be pulled from it
-
-# bot prefixes
+is_prod = os.environ.get('IS_HEROKU', None)
 
 
-# variables and other stuff
 
-
-BOT_PREFIX = os.environ['prefix']
-TOKEN = os.environ['token']
+if is_prod:
+    BOT_PREFIX = os.environ.get('prefix')
+    TOKEN = os.environ.get('token')
+else:
+    BOT_PREFIX = os.environ['prefix']
+    TOKEN = os.environ['token']
 
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
