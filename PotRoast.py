@@ -8,10 +8,6 @@ import random
 
 is_prod = os.environ.get('IS_HEROKU', None)
 
-
-
-
-
 if is_prod:
     BOT_PREFIX = os.environ['prefix']
     TOKEN = os.environ['token']
@@ -23,7 +19,6 @@ client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 
 
-client.remove_command('help')
 
 
 
@@ -35,15 +30,6 @@ async def on_ready():
     print('------')
     await client.change_presence(game=discord.Game(name="Dark Souls III"))
 
-
-
-
-@client.command(name="help")
-async def help():
-    msg='''commads:\n!roast + @user -generates a roast from a list and directs it to the user mentioned\n
-    !tts True/False -turns tts on or off\n
-    !help -lists all commands'''
-    await client.say(msg)
 
 @client.command(name="tts")
 async def entts(enable=False):
