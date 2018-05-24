@@ -95,10 +95,9 @@ async def roast(message, Discuser: discord.User=None ):
     roasts2 = ["To find the amount of Friends you have you must first take the required amount of parameters "
                "you put in divided by the amount needed."]
 
-    if Discuser == client.user:
-        await client.send_message(message.channel, "Nice try but I can't Roast myself! {0.author.mention}".format(message))
 
-    elif not Discuser:
+
+    if not Discuser:
 
         await client.say(""+random.choice(roasts2), tts=canTTS)
     else:
