@@ -41,15 +41,12 @@ async def on_message(message):
         return
 
 
-
-
-
-
 @client.command(name="help")
 async def help():
     msg='''!roast + @user -generates a roast from a list and directs it to the user mentioned/n
     !tts True/False -turns tts on or off/n
     !help -lists all commands'''
+    await client.say(msg)
 
 @client.command(name="tts")
 async def entts(enable=False):
