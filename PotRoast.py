@@ -49,7 +49,7 @@ async def entts(enable=False):
 
 
 @client.command(name="roast")
-async def roast(message, Discuser: discord.User=None ):
+async def roast(user: discord.User=None ):
     roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ.", "Ur Mom Gay",
               "One might say that you lack an ability to process reasonable explanations for sticky situations.",
               "Yo mama so fat she occupies Wall St by herself!",
@@ -95,13 +95,11 @@ async def roast(message, Discuser: discord.User=None ):
     roasts2 = ["To find the amount of Friends you have you must first take the required amount of parameters "
                "you put in divided by the amount needed."]
 
-
-
-    if not Discuser:
+    if not user:
 
         await client.say(""+random.choice(roasts2), tts=canTTS)
     else:
-        await client.say(""+ Discuser.mention + " " + random.choice(roasts), tts=canTTS)
+        await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
 
 # Core Functions
 
