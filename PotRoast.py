@@ -35,16 +35,13 @@ async def on_ready():
     print('------')
     await client.change_presence(game=discord.Game(name="Dark Souls III"))
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+
 
 
 @client.command(name="help")
 async def help():
-    msg='''!roast + @user -generates a roast from a list and directs it to the user mentioned/n
-    !tts True/False -turns tts on or off/n
+    msg='''commads:\n!roast + @user -generates a roast from a list and directs it to the user mentioned\n
+    !tts True/False -turns tts on or off\n
     !help -lists all commands'''
     await client.say(msg)
 
