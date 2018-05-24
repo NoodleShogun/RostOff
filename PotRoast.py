@@ -96,7 +96,7 @@ async def roast(Discuser: discord.User=None):
                "you put in divided by the amount needed."]
 
     if Discuser == client.user:
-        return
+        client.say(""+ discord.Message.author + "Nice try but I can't roast myself.", tts=canTTS)
 
     elif not Discuser:
 
