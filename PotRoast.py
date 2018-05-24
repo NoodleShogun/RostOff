@@ -9,7 +9,7 @@ import random
 is_prod = os.environ.get('IS_HEROKU', None)
 
 
-bot.remove_command('help')
+
 
 
 if is_prod:
@@ -21,7 +21,11 @@ else:
 
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
-# Command Functions
+
+
+client.remove_command('help')
+
+
 
 @client.event
 async def on_ready():
