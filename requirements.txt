@@ -1,4 +1,4 @@
 
 git+git://github.com/Rapptz/discord.py.git@async#egg=discord
 
-git+git:github.com/jsvine/markovify.git
+git+https://github.com/jsvine/markovify
