@@ -31,6 +31,11 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="Dark Souls III"))
 
 
+@client.command(name="pizza")
+async def pizza_time():
+    await client.say("Pizza time! " + ":pizza:")
+
+
 @client.command(name="tts")
 async def entts(enable=False):
 
