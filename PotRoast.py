@@ -23,7 +23,7 @@ client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 
 
-client.remove_command('help')
+
 
 
 
