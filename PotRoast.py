@@ -11,8 +11,8 @@ is_prod = os.environ.get('IS_HEROKU', None)
 
 
 if is_prod:
-    BOT_PREFIX = os.environ.get('prefix')
-    TOKEN = os.environ.get('token')
+    BOT_PREFIX = os.environ['prefix']
+    TOKEN = os.environ['token']
 else:
     BOT_PREFIX = os.environ['prefix']
     TOKEN = os.environ['token']
