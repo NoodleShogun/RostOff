@@ -49,7 +49,7 @@ async def entts(enable=False):
 
 
 @client.command(name="roast")
-async def roast(Discuser: discord.User=None):
+async def roast(message, Discuser: discord.User=None ):
     roasts = ["If I wanted to Commit Suicide I'd climb your Ego and Jump to your IQ.", "Ur Mom Gay",
               "One might say that you lack an ability to process reasonable explanations for sticky situations.",
               "Yo mama so fat she occupies Wall St by herself!",
@@ -96,7 +96,7 @@ async def roast(Discuser: discord.User=None):
                "you put in divided by the amount needed."]
 
     if Discuser == client.user:
-        client.say(""+ discord.Message.author + "Nice try but I can't roast myself.", tts=canTTS)
+        await client.send_message(message.channel, "hugs {0.author.mention}".format(message))
 
     elif not Discuser:
 
