@@ -96,7 +96,7 @@ async def roast(message, Discuser: discord.User=None ):
                "you put in divided by the amount needed."]
 
     if Discuser == client.user:
-        await client.send_message(message.channel, "hugs {0.author.mention}".format(message))
+        await client.send_message(message.channel, "Nice try but I can't Roast myself! {0.author.mention}".format(message))
 
     elif not Discuser:
 
