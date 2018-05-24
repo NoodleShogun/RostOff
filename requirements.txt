@@ -1,4 +1,4 @@
 
 git+git://github.com/Rapptz/discord.py.git@async#egg=discord
 
-git+http//:github.com/jsvine/markovify#installation
+git+git:github.com/jsvine/markovify.git
