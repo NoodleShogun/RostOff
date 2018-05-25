@@ -7,7 +7,7 @@ Commands:
 !help  - lists commands
 !tts   - enables on tts mode (still in beta)
 !pizza - pizza time!
-
+!conspiracy - generates a conspiracy using markovian block chains. -created by: Takion
 Updates:
 
 The Gravy Update:
@@ -16,7 +16,7 @@ The Gravy Update:
 -added !help
 -added !pizza
 -added !tts
-
+-added !conspiracy
 
 
 BugFixes:
