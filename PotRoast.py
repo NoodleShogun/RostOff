@@ -66,7 +66,25 @@ async def conspiracy():
         nonsense = text_model.make_sentence()
         await client.say(""+(nonsense))
 
+
+@client.command(name="makeRoast")
+async def makeRoast():
+    with open("data/roasts.txt") as r:
+        text = r.read()
+    text_model = markovify.Text(text)
+    for i in range(1):
+        nonsense = text_model.make_sentence()
+        await client.say(""+ (nonsense))
+
+
+
+
+
 # Core Functions
+
+
+
+
 
 
 # core commands
