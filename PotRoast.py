@@ -68,13 +68,13 @@ async def conspiracy():
 
 
 @client.command(name="makeRoast")
-async def makeRoast():
+async def make_roast():
     with open("data/roasts.txt") as r:
         text = r.read()
     text_model = markovify.Text(text)
     for i in range(1):
         nonsense = text_model.make_sentence()
-        await client.say(""+ (nonsense))
+        await client.say(""+(nonsense))
 
 
 
