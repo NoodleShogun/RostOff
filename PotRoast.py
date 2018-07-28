@@ -76,16 +76,7 @@ async def make_roast():
         nonsense = text_model.make_sentence()
         await client.say(""+(nonsense))
 
-
-
-
-
 # Core Functions
-
-
-
-
-
 
 # core commands
 
