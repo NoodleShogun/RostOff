@@ -56,7 +56,7 @@ async def roast(user: discord.User=None ):
         else:
             await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
     else:
-        return
+        await client.say("{0.author.mention} No you.")
 
 
 @client.command(name="conspiracy")
