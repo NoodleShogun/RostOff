@@ -49,12 +49,14 @@ async def roast(user: discord.User=None ):
 
         roasts2 = ["To find the amount of Friends you have you must first take the required amount of parameters "
                    "you put in divided by the amount needed."]
+    if not client.user:
+        if not user:
 
-    if not user:
-
-        await client.say(""+random.choice(roasts2), tts=canTTS)
+            await client.say(""+random.choice(roasts2), tts=canTTS)
+        else:
+            await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
     else:
-        await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
+        return
 
 
 @client.command(name="conspiracy")
