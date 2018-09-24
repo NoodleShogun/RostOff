@@ -74,7 +74,11 @@ async def make_roast():
     text_model = markovify.Text(text)
     for i in range(1):
         nonsense = text_model.make_sentence()
-        await client.say(""+(nonsense))
+
+        if nonsense is None:
+            await client.say("I got Nothing. ¯\_(ツ)_/¯ ")
+        else:
+            await client.say(""+nonsense)
 
 # Core Functions
 
