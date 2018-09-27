@@ -16,6 +16,7 @@ else:
 client = Bot(command_prefix=BOT_PREFIX)
 canTTS = True
 
+
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -23,6 +24,13 @@ async def on_ready():
     print(client.user.id)
     print('------')
     await client.change_presence(game=discord.Game(name="Dark Souls III"))
+
+
+@client.event
+async def on_member_join(member):
+    with open("data/roasts.txt") as f:
+        roasts = f.readlines()
+    await client.say("" + member.mention + " " + random.choice(roasts), tts=canTTS)
 
 
 @client.command(name="pizza")
@@ -43,7 +51,7 @@ async def entts(enable=False):
 
 
 @client.command(name="roast")
-async def roast(user: discord.User=None ):
+async def roast(user: discord.User=None):
     with open("data/roasts.txt") as f:
         roasts = f.readlines()
 
@@ -56,7 +64,6 @@ async def roast(user: discord.User=None ):
         await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
 
 
-
 @client.command(name="conspiracy")
 async def conspiracy():
     with open("data/conspiracy.txt") as f:
@@ -64,7 +71,7 @@ async def conspiracy():
     text_model = markovify.Text(text)
     for i in range(1):
         nonsense = text_model.make_sentence()
-        await client.say(""+(nonsense))
+        await client.say(""+nonsense)
 
 
 @client.command(name="makeRoast")
