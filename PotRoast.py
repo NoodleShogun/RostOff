@@ -26,23 +26,6 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="Dark Souls III"))
 
 
-@client.event
-async def on_member_join(member):
-    with open("data/roasts.txt") as f:
-        roasts = f.readlines()
-
-    channel_id = "427040067119349760"
-
-    if channel_id is None:
-
-        channel_id = "434894895921102859"
-    else:
-
-        channel_id = "356280580012376075"
-
-    await client.say(discord.Object(id=channel_id),  member.mention + " " + random.choice(roasts))
-
-
 @client.command(name="pizza")
 async def pizza_time():
     await client.say("Pizza time! " + ":pizza:")
@@ -71,7 +54,7 @@ async def roast(user: discord.User=None):
     if not user:
         await client.say(""+random.choice(roasts2), tts=canTTS)
     else:
-        await client.say(""+ user.mention + " " + random.choice(roasts), tts=canTTS)
+        await client.say("" + user.mention + " " + random.choice(roasts), tts=canTTS)
 
 
 @client.command(name="conspiracy")
