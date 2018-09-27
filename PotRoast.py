@@ -31,14 +31,14 @@ async def on_member_join(member):
     with open("data/roasts.txt") as f:
         roasts = f.readlines()
 
-    channel_id = 427040067119349760
+    channel_id = "427040067119349760"
 
     if channel_id is None:
 
-        channel_id = 434894895921102859
+        channel_id = "434894895921102859"
     else:
 
-        channel_id = 356280580012376075
+        channel_id = "356280580012376075"
 
     await client.say(discord.Object(id=channel_id),  member.mention + " " + random.choice(roasts))
 
